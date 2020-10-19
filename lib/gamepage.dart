@@ -23,7 +23,7 @@ class _GamePageState extends State<GamePage> {
 
   @override
   Widget build(BuildContext context) {
-    InkWell makeCard(Game game) => new InkWell(
+    InkWell makeCard(Game game) => InkWell(
           onTap: () {
             Navigator.push(
               context,
@@ -34,15 +34,15 @@ class _GamePageState extends State<GamePage> {
               ),
             );
           },
-          child: new Card(
+          child: Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            child: new Column(
+            child: Column(
               children: <Widget>[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: new Image(
+                  child: Image(
                       image: AssetImage(game.gameImage), fit: BoxFit.fill),
                 ),
                 Padding(

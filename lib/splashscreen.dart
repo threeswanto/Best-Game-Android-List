@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigate() {
-    new Timer(new Duration(milliseconds: 1500), () {
+    Timer(Duration(milliseconds: 1500), () {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => HomeScreen()));
     });
@@ -32,9 +32,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       backgroundColor: Colors.indigo,
-      body: new Center(
+      body: Center(
         child: Container(
           alignment: Alignment.center,
           child: Column(
@@ -50,11 +50,17 @@ class _SplashScreenState extends State<SplashScreen> {
                   )),
               Text(
                 Constants.SplashTitle,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
               Text(
                 Constants.SplashCredits,
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
             ],
           ),
